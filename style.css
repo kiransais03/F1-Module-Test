@@ -43,6 +43,10 @@ body {
     text-align: center;
 }
 
+.navmenu {
+    display: none;
+}
+
 .navitems:not(.companyname):hover {
     background-color: #B1A592;
     color: black;
@@ -73,9 +77,9 @@ a {
     border-radius: 30px;
     display: flex;
     flex-direction: column;
-   justify-content: space-around;
+   justify-content: flex-start;
    width: 40vw;
-   /* flex-shrink: 4; */
+   flex-shrink: 1;
 }
 
 .div1 {
@@ -98,11 +102,15 @@ a {
     display: flex;
     justify-content: center;
     overflow:hidden;
+    height: 75%;
+    /* margin-bottom: 80px; */
+    padding-bottom: 25px;
 }
 
 .streetimg img {
- width: 100%;
- margin-bottom: 30px;
+ /* width: 100%; */
+ height: 200%;
+ /* margin-bottom: 30px; */
  border-radius:10%;
 }
 
@@ -322,36 +330,12 @@ div.paratext {
 }
 
 /* Animations */
- /* .streetimg img:hover ,.brimg:hover ,.prtimg:hover ,.vpimg :hover{
-   transform: scale(1.2);
-   width:100%;
- } */
-
-
- .portrait:hover .prtname h2{
-    text-decoration: underline;
-    transition: text-decoration 0.5s ease-out;
- }
-
-
- /* img.strimg1 ,img.brdimg2 ,img.prtimg3 ,img.vpimg4 {
-    width: 100%;
-    transition: transform 1s ease,border-radius 1s ease;
-    transform-origin: 50% 50%;
-} */
-
-/* img.brdimg2:hover,img.prtimg3:hover ,img.vpimg4:hover
- {
-   
-    transform: scale(1.1);
-    width: 100%;
-    border-radius:10%;
-} */
-
+ 
 /* Museum  */
 
 .museum .streetimg img {
     width: 100%;
+    height: 100%;
     transition: transform 1s ease, border-radius 1s ease;
     transform-origin: 50% 50%;
   }
@@ -390,6 +374,16 @@ div.paratext {
     border-top-right-radius: 8%;
   }
 
+  .portrait .prtname h2 {
+    width: 100%;
+    transition: text-decoration 1s ease;
+    transform-origin: 50% 50%;
+  }
+
+ .portrait:hover .prtname h2{
+    text-decoration: underline;
+ }
+
   /* Vintage Painting  */
 
   .vintagepaint .vpimg img {
@@ -404,12 +398,21 @@ div.paratext {
     border-top-right-radius: 8%;
   }
 
-/* img.strimg1:hover {
-    transform: scale(1.1);
-    width: 100%;
-    border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
-} */
+
+
+  /* Media Queries */
+
+@media screen and (max-width:480px) {
+    .navmenu {
+        display: block;
+    }
+
+    .leftnav div:not(.companyname,.navmenu) {
+        display: hide;
+    }
+
+}
+
 
 
 
