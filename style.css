@@ -43,7 +43,7 @@ body {
     text-align: center;
 }
 
-.navmenu {
+.navmenu , .cp1 {
     display: none;
 }
 
@@ -103,19 +103,20 @@ a {
     justify-content: center;
     overflow:hidden;
     height: 75%;
-    /* margin-bottom: 80px; */
-    padding-bottom: 25px;
+    /* margin-bottom: 25px; */
+    /* padding-bottom: 25px; */
 }
 
 .streetimg img {
  /* width: 100%; */
+ overflow:hidden;
  height: 200%;
  /* margin-bottom: 30px; */
  border-radius:10%;
 }
 
 .museum > div:not(.cardfooter) {
-    margin: 0 30px 0 30px;
+    margin: 0 30px 15px 30px;
 }
 
 .cardname {
@@ -402,13 +403,156 @@ div.paratext {
 
   /* Media Queries */
 
-@media screen and (max-width:480px) {
+  /* Mobiles,SmartPhones */
+
+@media screen and (min-width:0px) and (max-width:480px) {
     .navmenu {
-        display: block;
+        display: flex;
     }
 
-    .leftnav div:not(.companyname,.navmenu) {
-        display: hide;
+    .cp1 {
+        display: flex;
+        width:70%;
     }
+
+    .navbar {
+        display: flex;
+        flex-wrap: nowrap;
+        width:100%;
+        justify-content: space-between;
+    }
+
+    .leftnav {
+        display: none;
+    }
+
+    .rightnav {
+        display: none;
+    }
+
+    .maincont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .museum {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+       width: 95vw;
+    }
+
+    .rightitems {
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .brdiv1 {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .rightrow2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 15px;
+      }
+
+}
+
+ /* Ipad and Tablets */
+
+@media screen and (min-width:481px) and (max-width:768px) {
+    .navmenu {
+        display: flex;
+    }
+
+    .cp1 {
+        display: flex;
+        width:70%;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: nowrap;
+        width:100%;
+        justify-content: space-between;
+    }
+
+    .leftnav {
+        display: none;
+    }
+
+    .rightnav {
+        display: none;
+    }
+
+    .maincont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .museum {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+       width: 95vw;
+    }
+
+    .streetimg {
+        max-height: 40vh;
+        width: 95%;
+        align-self: center;
+    }
+
+    .prtdiv :not(.cardfooter,.dots div,.cardfooter div) {
+        margin: 24px 5px;
+    }
+
+    .vintagepaint {
+        margin-right: 10px;
+    }
+
+    .rightitems {
+        width: 95vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+    }
+
+}
+
+/* Small Laptop Screens and Large Tablets */
+
+@media screen and (min-width:769px) and (max-width:1024px)  {
+    /* .companyname {
+        width:40%;
+    }  */
+
+    .maincont {
+        column-gap: 8px;
+        margin-top: 8px;
+    }
+
+    .rightitems {
+        row-gap: 8px;
+    }
+
+    .brdiv1 {
+        column-gap: 8px;
+    }
+
+    .rightrow2 {
+        column-gap:8px;
+      }
 
 }
