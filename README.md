@@ -1,5 +1,7 @@
 # F1-Module-Test
 
+Deployed Link : https://kiransais03.github.io/F1-Module-Test-Museo-Sans-Blog/
+
 Project Overview (100 Marks)
 Task
 Create a responsive HTML and CSS design based on the provided Figma design, with hover animations and Inter font imported from Google Fonts.
